@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Periodic Table of DPI · DPG · AI — Infrastructure Powered AI by Deepak Ghadge</title>
+<meta name="description" content="116 elements of Digital Public Infrastructure, Digital Public Goods, and AI — mapped as a periodic table. From the book Infrastructure Powered AI (DPI^AI) by Deepak Ghadge.">
+<meta property="og:title" content="Periodic Table of DPI · DPG · AI">
+<meta property="og:description" content="116 elements of Digital Public Infrastructure mapped as a periodic table. Infrastructure Powered AI by Deepak Ghadge.">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0D1B2A;color:#E8F4FD;min-height:100vh;padding:16px 8px 40px}
+.pt{max-width:1200px;margin:0 auto;padding:0 8px}
+.hdr{text-align:center;margin-bottom:16px}
+.hdr h1{font-size:20px;font-weight:600;color:#FFFFFF;margin-bottom:4px;letter-spacing:.3px}
+.hdr .sub{font-size:12px;color:#7F8C8D;margin-bottom:2px}
+.hdr .auth{font-size:11px;color:#2E86AB;font-style:italic}
+.hdr .dpi{font-size:22px;font-weight:700;color:#2E86AB;letter-spacing:1px;margin-bottom:6px}
+.hdr .dpi sup{font-size:13px;color:#B7950B;vertical-align:super}
+.grid{display:grid;grid-template-columns:repeat(18,minmax(0,1fr));gap:2px;width:100%}
+.el{border-radius:3px;cursor:pointer;padding:2px 1px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:1/1.15;border:0.5px solid transparent;transition:transform .1s,box-shadow .1s;overflow:hidden}
+.el:hover{transform:scale(1.2);z-index:30;box-shadow:0 3px 10px rgba(0,0,0,.5)}
+.el .n{font-size:6.5px;font-weight:500;line-height:1;align-self:flex-start;padding-left:2px;width:100%}
+.el .s{font-size:11px;font-weight:600;line-height:1.2;text-align:center}
+.el .nm{font-size:5px;line-height:1.1;text-align:center;max-width:100%;overflow:hidden;white-space:nowrap;padding:0 1px}
+.blank{background:transparent!important;border-color:transparent!important;pointer-events:none;aspect-ratio:1/1.15}
+.marker{border:0.5px dashed #2E4057;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:6px;pointer-events:none;aspect-ratio:1/1.15;color:#4A6A8A}
+.gap{grid-column:1/-1;height:6px}
+.row-lbl{grid-column:1/-1;font-size:9px;color:#7F8C8D;padding:3px 0 2px 2px;font-weight:500;letter-spacing:.3px}
+
+/* Category colours — dark theme */
+.id{background:#0C2D5E;border-color:#1A5CA8;color:#BDD8F5}.id .n,.id .nm{color:#5AA0E8}
+.py{background:#0C3318;border-color:#1A7A3A;color:#A8DFB8}.py .n,.py .nm{color:#4DBD72}
+.dx{background:#231858;border-color:#5040B0;color:#C8C0F5}.dx .n,.dx .nm{color:#8878E0}
+.ai{background:#3D2200;border-color:#A06010;color:#F5D080}.ai .n,.ai .nm{color:#D4920A}
+.gv{background:#3D0C0C;border-color:#A02020;color:#F5B0B0}.gv .n,.gv .nm{color:#D44040}
+.if{background:#063328;border-color:#10806A;color:#90EAD0}.if .n,.if .nm{color:#20C0A0}
+.dp{background:#3D0C28;border-color:#A02060;color:#F5B0D5}.dp .n,.dp .nm{color:#D440A0}
+.lg{background:#1A2030;border-color:#405070;color:#C0D0E0}.lg .n,.lg .nm{color:#8090A8}
+.cy{background:#3D1500;border-color:#A03A00;color:#F5C090}.cy .n,.cy .nm{color:#D06020}
+.ti{background:#062840;border-color:#106898;color:#90D0F5}.ti .n,.ti .nm{color:#20A8E0}
+
+.detail{margin-top:14px;padding:14px 18px;border-radius:8px;background:#1B2A3A;border:0.5px solid #2E4057;min-height:72px;font-size:13px;line-height:1.7;color:#A0B8CC}
+.dtitle{font-size:15px;font-weight:600;color:#FFFFFF;margin-bottom:3px}
+.dcat{font-size:11px;margin-bottom:6px;color:#2E86AB}
+
+.leg{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:14px;justify-content:center}
+.li{display:flex;align-items:center;gap:4px;font-size:10px;color:#7F8C8D}
+.ld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+
+footer{text-align:center;margin-top:24px;font-size:11px;color:#4A6A8A}
+footer a{color:#2E86AB;text-decoration:none}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="pt">
+  <div class="hdr">
+    <div class="dpi">DPI<sup>AI</sup></div>
+    <h1>The Periodic Table of Digital Public Infrastructure · DPG · AI</h1>
+    <div class="sub">116 elements across 10 categories · Click any element to read its description</div>
+    <div class="auth">From the book <em>Infrastructure Powered AI</em> by Deepak Ghadge &nbsp;·&nbsp; infrastructurepoweredai.com</div>
+  </div>
+
+  <div class="grid" id="g"></div>
+
+  <div class="detail" id="det">
+    <div style="text-align:center;padding-top:6px;color:#4A6A8A">Click any element to read its description</div>
+  </div>
+
+  <div class="leg">
+    <div class="li"><div class="ld" style="background:#1A5CA8"></div>Identity</div>
+    <div class="li"><div class="ld" style="background:#1A7A3A"></div>Payments</div>
+    <div class="li"><div class="ld" style="background:#5040B0"></div>Data Exchange</div>
+    <div class="li"><div class="ld" style="background:#A06010"></div>AI / ML</div>
+    <div class="li"><div class="ld" style="background:#A02020"></div>Governance</div>
+    <div class="li"><div class="ld" style="background:#10806A"></div>Infrastructure</div>
+    <div class="li"><div class="ld" style="background:#A02060"></div>Open Source / DPG</div>
+    <div class="li"><div class="ld" style="background:#405070"></div>Legal / Standards</div>
+    <div class="li"><div class="ld" style="background:#A03A00"></div>Cybersecurity</div>
+    <div class="li"><div class="ld" style="background:#106898"></div>Implementations</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Deepak Ghadge &nbsp;·&nbsp; <em>Infrastructure Powered AI — DPI<sup style="font-size:9px">AI</sup></em> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/deepakghadge" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+const E=(n,s,nm,c,d)=>({n,s,nm,c,d});
+const cats={id:'Identity',py:'Payments',dx:'Data Exchange',ai:'AI / ML',gv:'Governance',if:'Infrastructure',dp:'Open Source / DPG',lg:'Legal / Standards',cy:'Cybersecurity',ti:'Implementations'};
+
+const table=[
+['1-1', E(1,'DPI','Dig Pub Infra','id','Digital Public Infrastructure — the foundational three-rail system of identity, payments, and data exchange. The operating system for digital government at national scale.')],
+['1-18',E(2,'DPG','Dig Pub Goods','dp','Digital Public Goods — open-source software, open data, open AI meeting privacy, security and interoperability standards. The sovereign building blocks of DPI.')],
+['2-1', E(3,'Id','Digital ID','id','Digital Identity — the unique, verified, biometrically-anchored credential for every citizen. Without it, no other DPI service can function reliably or inclusively.')],
+['2-2', E(4,'PR','Pay Rail','py','Payment Rail — open, interoperable real-time digital payments. The second rail of DPI. UPI, M-Pesa, PAPSS. Even a ₹5 transaction now moves through UPI in India.')],
+['2-13',E(5,'Dx','Data Exch','dx','Data Exchange — the third rail of DPI. Secure, consent-based data transfer between institutions and borders. X-Road is the global reference implementation.')],
+['2-14',E(6,'AI','Artif Intel','ai','Artificial Intelligence — the force multiplier of DPI^AI. Compresses a 7–12 year DPI build into 2–3 years. The power symbol in the title Infrastructure Powered AI.')],
+['2-15',E(7,'Gv','Governance','gv','DPI Governance — the legal, institutional and technical framework ensuring DPI serves citizens rather than surveilling them. Non-negotiable from day one.')],
+['2-16',E(8,'If','Infra','if','Sovereign Infrastructure — data centres, connectivity, hardware security. Controlling infrastructure means controlling destiny.')],
+['2-17',E(9,'Cy','Cybersec','cy','Cybersecurity — zero trust, post-quantum cryptography, supply chain security. The defensive perimeter every DPI government must build before threats mature.')],
+['2-18',E(10,'Lg','Legal Fwk','lg','Legal and Standards Framework — international agreements, W3C specs, ISO standards, national legislation. The rules that make DPI trustworthy and interoperable.')],
+['3-1', E(11,'CR','Civil Reg','id','Civil Registration — birth, death, marriage records. The foundational raw data for trusted digital identity. OpenCRVS is the open-source implementation deployed globally.')],
+['3-2', E(12,'G2','G2P Pay','py','Government-to-Person Payments — direct digital transfer of benefits and subsidies to verified citizens. Eliminates leakage, ghost beneficiaries, and intermediary fraud at scale.')],
+['3-13',E(13,'AP','Open API','dx','Open APIs — the interoperability mechanism. Any authorised service connects to foundational identity, payments, or data exchange infrastructure without bespoke integration.')],
+['3-14',E(14,'ML','Mach Learn','ai','Machine Learning — pattern recognition at population scale. Fraud detection, eligibility, deduplication, and demand forecasting from DPI datasets across millions of citizens.')],
+['3-15',E(15,'HO','Human OR','gv','Human Override — every AI decision affecting a citizen must have an accessible pathway for human review. No citizen is definitively denied a service by an algorithm alone.')],
+['3-16',E(16,'SD','Sov DC','if','Sovereign Data Centre — physically within national borders, national law, auditable software, national staff. Five dimensions: physical, legal, operational, technical, financial.')],
+['3-17',E(17,'ZT','Zero Trust','cy','Zero Trust Architecture — never trust, always verify. No user or device is trusted by default. Every access request authenticated, authorised, and continuously validated.')],
+['3-18',E(18,'W3','W3C Stds','lg','W3C Standards — DID and Verifiable Credentials specifications. The technical foundation of interoperable digital identity. Open, free, and globally adopted.')],
+['4-1', E(19,'Bi','Biometrics','id','Biometric Identity — fingerprint, iris, face. Dr. Anil K. Jain (MSU) is the world\'s foremost biometrics scientist with 500+ publications underpinning the entire field.')],
+['4-2', E(20,'UP','UPI','py','Unified Payments Interface — USD 340B+ transactions in 2023. Even a ₹5 transaction runs on UPI. India\'s real-time payments rail. The global reference for open payment infrastructure.')],
+['4-3', E(21,'NL','NLP','ai','Natural Language Processing — AI chatbots and voice assistants delivering government services in local languages, reaching citizens with low digital literacy across every DPI context.')],
+['4-4', E(22,'CV','Comp Vis','ai','Computer Vision — document OCR, facial recognition, satellite crop monitoring, border control. AI analysis of images enabling DPI automation at national scale.')],
+['4-5', E(23,'FR','Face Recog','id','Facial Recognition — contactless biometric verification. Remote enrolment, passive liveness, payment authorisation at DigiYatra airports. Future primary biometric modality for DPI.')],
+['4-6', E(24,'Lv','Liveness','id','Liveness Detection — AI confirming a real person is present, defeating printed photos, video replays, and AI-generated deepfakes in biometric identity systems.')],
+['4-7', E(25,'Dd','Deepfake D','cy','Deepfake Detection — AI identifying synthetic faces and voices. As generative AI advances, mandatory adversarial testing of liveness systems every quarter, not just at deployment.')],
+['4-8', E(26,'Sc','Smart Con','py','Smart Contracts — programmable payment conditions. Release agricultural subsidy when satellite confirms planting. Trigger insurance when rainfall falls below threshold.')],
+['4-9', E(27,'Fp','Face Pay','py','Facial Recognition Payments — authorising transactions via face match. Eliminates entire fraud classes: PIN theft, SIM swap, OTP phishing. Mastercard Smile to Pay deployed globally.')],
+['4-10',E(28,'eK','eKYC','id','Electronic KYC — instant remote identity verification via digital credential. Replaces weeks of physical document checks. Key to financial inclusion for the 1.4 billion unbanked.')],
+['4-11',E(29,'Vc','Verif Cred','id','Verifiable Credentials (W3C) — cryptographically signed digital certificates held in citizen wallet, presented to any verifier without querying a central database. Privacy by design.')],
+['4-12',E(30,'DI','Decent ID','id','Decentralised Identifiers (DIDs) — W3C standard for identifiers controlled by the holder, not a central authority. Foundation of Self-Sovereign Identity.')],
+['4-13',E(31,'OO','Once Only','dx','Once-Only Principle — citizens provide data to government once, reused across all services. Core design principle of Tanzania Jamii Stack and Estonia X-Road.')],
+['4-14',E(32,'Co','Consent','dx','Consent Architecture — technical framework for citizens to exercise granular, informed control over exactly how their data is collected, stored, shared and used.')],
+['4-15',E(33,'BA','Bias Audit','gv','Bias Audit — mandatory assessment of AI accuracy across demographic groups before citizen-facing deployment. Must test on YOUR population, not NIST averages alone.')],
+['4-16',E(34,'PK','PKI','if','Public Key Infrastructure — digital certificates, certificate authorities, cryptographic protocols. The trust backbone. National PKI is a prerequisite for internationally recognised digital credentials.')],
+['4-17',E(35,'PQ','Post-Quant','cy','Post-Quantum Cryptography — CRYSTALS-Kyber and Dilithium (NIST 2024). Mandatory migration before quantum computers break RSA. The harvest-now-decrypt-later threat is already active.')],
+['4-18',E(36,'GD','GDPR','lg','GDPR — EU General Data Protection Regulation. The global data governance reference framework. Data minimisation, consent, purpose limitation, right to explanation — all applicable to DPI.')],
+['5-1', E(37,'SS','SSI','id','Self-Sovereign Identity — citizens own and control identity independent of any centralised authority. Bhutan NDI is the leading national implementation. Jacques von Benecke, architect.')],
+['5-2', E(38,'CB','CBDC','py','Central Bank Digital Currency — sovereign digital money. MIT Project Hamilton (OpenCBDC): 1.7M transactions/second open-source reference architecture. Director Neha Narula, MIT DCI.')],
+['5-3', E(39,'Fe','Fed Learn','ai','Federated Learning — training AI across distributed devices without centralising sensitive data. Only model gradients shared. Preserving citizen data privacy at national DPI scale.')],
+['5-4', E(40,'SL','Split Lrn','ai','Split Learning (MIT Media Lab, Prof. Ramesh Raskar) — only intermediate model states transmitted. Raw data never leaves the device. Critical for AI on sensitive DPI health and identity data.')],
+['5-5', E(41,'XA','Expl AI','ai','Explainable AI — AI decisions explained in human-readable terms. Mandatory under EU AI Act for high-risk government applications. Citizens have the right to understand AI decisions.')],
+['5-6', E(42,'Va','Verf AI','ai','Verifiable AI — cryptographic proof that an AI model executed correctly and used the data it claimed. Beyond explainability. Critical for multi-agent DPI fraud prevention.')],
+['5-7', E(43,'Ag','AI Agent','ai','AI Agents — autonomous software acting on citizen behalf. The shift from app-mediated to agent-mediated government services. Design DPI APIs for agents today or retrofit expensively tomorrow.')],
+['5-8', E(44,'ND','NANDA','ai','Project NANDA (MIT Media Lab, Prof. Raskar) — Network of AI Agents in Decentralised Architecture. Five pillars: discovery, identity, communication, privacy, governance. TCP/IP for AI agents.')],
+['5-9', E(45,'PA','PAC Priv','ai','PAC Privacy (MIT CSAIL 2025) — privacy-preserving AI training 81% faster. Enables resource-limited devices to run accurate AI models on sensitive DPI data. IEEE S&P 2025.')],
+['5-10',E(46,'Gn','Gen AI','ai','Generative AI — large language models automating document processing, multilingual citizen services, policy drafting. The most visible AI layer of DPI acceleration.')],
+['5-11',E(47,'Oc','OCR / AI','ai','AI-powered OCR — digitising decades of handwritten civil records, land registries, paper government documents. Months instead of years. The DPI entry point where data is still on paper.')],
+['5-12',E(48,'Pd','Pred Anl','ai','Predictive Analytics — AI forecasting fraud risk, epidemic spread, crop failure, benefit eligibility from population-scale DPI data. The analytical intelligence layer of smart government.')],
+['5-13',E(49,'Wl','ID Wallet','id','Digital Identity Wallet — citizen-held app for verifiable credentials. EU EUDI Wallet, Bhutan NDI, MOSIP Inji. Non-custodial wallets are the privacy-respecting standard.')],
+['5-14',E(50,'FH','HL7 FHIR','dx','HL7 FHIR — global health data exchange standard. Longitudinal health records, AI diagnostics, cross-border portability. Foundation of health DPI interoperability globally.')],
+['5-15',E(51,'Sb','Sunset Cl','gv','Sunset Provisions — mandatory expiry dates on AI system authorisations. Prevents temporary surveillance infrastructure becoming permanent. A non-negotiable AI guardrail for DPI governance.')],
+['5-16',E(52,'5G','5G / IoT','if','5G and IoT — connectivity and sensor layer for next-generation DPI. Smart agriculture, remote health monitoring, real-time infrastructure management. The physical-digital bridge.')],
+['5-17',E(53,'SB','SBOM','cy','Software Bill of Materials — formal inventory of all software components in DPI systems. Mandatory for supply chain security. Without SBOM, you cannot know what you are defending.')],
+['5-18',E(54,'eI','eIDAS 2','lg','eIDAS 2.0 — EU mandate for digital identity wallets across 27 member states. The world\'s largest cross-border digital identity framework. Sets the global interoperability standard.')],
+['6-1', E(55,'Aa','Aadhaar','id','Aadhaar (UIDAI, India) — 1.4 billion enrolled. USD 12B annual leakage eliminated. The world\'s largest biometric identity programme. Built by Nandan Nilekani and Pramod Varma.')],
+['6-2', E(56,'MP','M-Pesa','py','M-Pesa — mobile money proof of concept. 51M+ users. Built for the phone people actually have. Africa\'s most consequential fintech infrastructure. Blueprint for inclusive payments.')],
+['6-3', E(57,'RS','RSA','lg','RSA Encryption (MIT CSAIL 1977, Rivest-Shamir-Adleman) — protecting virtually every DPI transaction today. Being migrated to post-quantum CRYSTALS-Kyber and Dilithium.')],
+['6-4', E(58,'ZK','ZK Proof','lg','Zero-Knowledge Proofs (MIT 1989, Goldwasser-Micali-Rackoff) — prove a statement without revealing underlying data. Foundation of privacy-preserving SSI and selective disclosure in DPI wallets.')],
+['6-5', E(59,'DP','Diff Priv','lg','Differential Privacy — mathematical guarantee that individual records cannot be inferred from population analytics. Enables AI on DPI data without compromising citizen privacy.')],
+['6-6', E(60,'HN','HNDL','cy','Harvest Now Decrypt Later — adversaries intercepting encrypted DPI biometric templates today to decrypt with future quantum computers. Biometric data cannot be re-issued. Migration is urgent.')],
+['6-7', E(61,'Hn','HSM','if','Hardware Security Module — tamper-resistant device storing root cryptographic keys. The mandatory baseline for any national identity system. Keys must never exist outside an HSM.')],
+['6-8', E(62,'Ms','Micro Seg','cy','Microsegmentation — isolated network zones preventing lateral breach propagation. A breach of one DPI layer does not become a breach of everything.')],
+['6-9', E(63,'Tp','Threat Int','cy','Threat Intelligence Sharing — cross-government sharing of indicators of compromise. Nation-state threat actors operate across borders. National DPI defences must too.')],
+['6-10',E(64,'Sc','Supply Ch','cy','Supply Chain Security — auditing every third-party dependency in DPI. SolarWinds (2020) is the cautionary tale. SBOM is the first line of defence.')],
+['6-11',E(65,'Ed','Edge Comp','if','Edge Computing — processing at the device or local node. DPI services in low-connectivity environments. On-device biometric matching eliminates centralised template risk.')],
+['6-12',E(66,'NA','Nat AI St','if','National AI Stack — sovereign data + national GPU compute + open LLMs + fine-tuning. Build DPI and you build the data foundation for national AI. Sovereignty stacks.')],
+['6-13',E(67,'Sd','Sel Discl','dx','Selective Disclosure — share only specific credential attributes. Prove nationality without revealing address. Prove professional licence without revealing date of birth.')],
+['6-14',E(68,'Tr','Trusted D','dx','Trusted Data (MIT Connection Science, Prof. Sandy Pentland) — OPAL framework for data governance. Run algorithms where data lives. Blueprint for ethical DPI data exchange.')],
+['6-15',E(69,'Io','Ind Overs','gv','Independent Oversight — autonomous audit bodies with genuine technical capability, separate from agencies operating DPI. The institutional check on algorithmic power in government.')],
+['6-16',E(70,'Pp','Privacy D','gv','Privacy by Design — seven foundational principles embedding privacy from the outset, not as compliance after the fact. The design philosophy of every responsible DPI system.')],
+['6-17',E(71,'IC','ICAO DTC','lg','ICAO Digital Travel Credential — international standard for a mobile-held digital passport. Foundation for replacing physical passports by 2030 at international borders.')],
+['6-18',E(72,'EU','EU AI Act','lg','EU AI Act — world\'s first binding AI regulation. High-risk classification for government identity and benefits AI systems. Mandatory conformity assessments and human oversight.')],
+['7-1', E(73,'Et','Estonia','ti','Estonia e-Estonia — 25-year commitment to digital sovereignty. Origin of X-Road. Most advanced national DPI ecosystem per capita. The model every government should study.')],
+['7-2', E(74,'Rw','Rwanda','ti','Rwanda DPI — President Kagame\'s digital transformation vision. RISA led by Josephine Mukesha. Near-universal adult identity. Africa\'s DPI model for sustained political commitment.')],
+['7-3', E(75,'OA','OPAL','dx','Open Algorithms (MIT, Prof. Pentland) — WEF + Orange + MIT. Algorithms run on telecom data for public benefit without centralising it. DPI data governance blueprint.')],
+['7-4', E(76,'JP','J-PAL','gv','MIT J-PAL (Banerjee & Duflo, Nobel 2019) — randomised evidence for DPI. Muralidharan et al. 2016: 24% leakage reduction from Aadhaar-linked payments. The DPI proof of concept.')],
+['7-5', E(77,'Bn','Bhutan NDI','ti','Bhutan National Digital Identity — world\'s most philosophically advanced SSI-based national identity. Citizen-controlled, privacy-by-design. Jacques von Benecke, architect.')],
+['7-6', E(78,'Jm','Jamii Stk','ti','Jamii Stack (Tanzania) — Namba + X-Change + Pay. 25M+ enrolled, 898 connected systems, built in 3 years. Africa\'s DPI story of the decade.')],
+['7-7', E(79,'In','India Stk','ti','India Stack — Aadhaar + UPI + DigiLocker. The world\'s most consequential DPI. Nandan Nilekani + Pramod Varma + Sanjay Jain (iSPIRT). Template for four continents.')],
+['7-8', E(80,'MO','MOSIP','dp','MOSIP — Modular Open Source Identity Platform. 14+ countries. The DPG reference for national digital identity. IIIT Bangalore. Inji wallet. The open-source Aadhaar.')],
+['7-9', E(81,'PA','PAPSS','py','PAPSS — Pan-African Payment and Settlement System. Afreximbank. Instant cross-border payments across African currencies. The payments DPI for African economic integration.')],
+['7-10',E(82,'Cv','Co-Dev','dp','Co-Develop — fund accelerating DPI in lower-income countries. CEO: C V Madhukar. Funding, technical assistance, and peer learning for governments building sovereign DPI.')],
+['7-11',E(83,'50','50-in-5','gv','50-in-5 — commitment to implement three core DPI components in 50 countries in 5 years. The DPI movement\'s mobilisation moment.')],
+['7-12',E(84,'DY','DigiYatra','ti','DigiYatra (India) — facial recognition boarding at airports. Millions of passengers daily, no physical boarding pass. World\'s most scaled biometric travel deployment. Suresh Khadakbavi · Ram Kunchur · Siddharth Sharma.')],
+['7-13',E(85,'Dm','Data Min','dx','Data Minimisation — collect only the minimum personal data necessary. Core GDPR principle and mandatory DPI design requirement. The architectural discipline that makes consent meaningful.')],
+['7-14',E(86,'Px','Priv Comp','dx','Privacy-Preserving Computation — homomorphic encryption enabling analytics on encrypted DPI data. The technical frontier of privacy-by-design at national scale.')],
+['7-15',E(87,'Dr','Data Rts','gv','Digital Rights Framework — the legal architecture defining what citizens can demand and what governments can do with DPI data. The social contract of the digital state.')],
+['7-16',E(88,'Is','ISO 18013','lg','ISO 18013-5 — mobile driver\'s licence and digital travel credential standard. The technical bridge from today\'s physical passport to tomorrow\'s digital one.')],
+['7-17',E(89,'NP','NIST PQC','lg','NIST PQC (2024) — FIPS 203 CRYSTALS-Kyber and FIPS 204 Dilithium. The mandatory global cryptographic migration roadmap. Every DPI system needs a documented PQC plan now.')],
+['7-18',E(90,'30','ISO 30107','lg','ISO/IEC 30107-3 — Biometric Presentation Attack Detection. Mandates testing liveness detection against real deepfakes. Require PAD Level 2 in all biometric vendor procurement.')],
+];
+
+const lant=[
+E(91,'OC','OpenCRVS','dp','OpenCRVS — open-source civil registration. Birth, death, marriage in countries that had paper registries five years ago. Bangladesh, Zambia, Ghana, Guinea.'),
+E(92,'OG','OpenG2P','dp','OpenG2P — open-source G2P payment delivery connecting digital identity to social protection. Sierra Leone, Philippines, Mozambique.'),
+E(93,'GS','GovStack','dp','GovStack (ITU/GIZ/Estonia/DIAL) — reusable DPI building blocks. The closest thing to an international DPI standard. Specification layer for sovereign digital government.'),
+E(94,'DA','DIAL','dp','Digital Impact Alliance — open-source DPI advocacy, the DPG Registry, and ecosystem support. Defining what qualifies as a Digital Public Good globally.'),
+E(95,'CD','CDPI','dp','Centre for Digital Public Infrastructure — policy frameworks, technical resources, and the practitioner knowledge base for the global DPI movement.'),
+E(96,'DP','DPGA','dp','Digital Public Goods Alliance — the certification body. DPG Standard and Registry identifying open-source components meeting privacy, security, and interoperability requirements.'),
+E(97,'XR','X-Road','dp','X-Road (NIIS/Estonia) — open-source data exchange layer deployed in 20+ countries. Tanzania\'s Jamii X-Change is built on it. Most copied government data exchange architecture globally.'),
+E(98,'Ij','Inji Wllt','dp','Inji (MOSIP) — open-source verifiable credential wallet. Citizens store and present government-issued credentials from their phone. Philippines, Sri Lanka, Morocco.'),
+E(99,'iS','iSPIRT','dp','iSPIRT Foundation — the volunteer community behind India Stack. Intellectual home of the global DPI movement. Nandan Nilekani, Pramod Varma, Sanjay Jain.'),
+E(100,'ID','ID4D','dp','ID4D (World Bank) — Identification for Development. Primary multilateral DPI funder. Most comprehensive global dataset on digital identity across 210 countries.'),
+E(101,'UN','UNHCR','dp','UNHCR PRIMES — humanitarian identity for displaced populations in 60+ countries. Building Blocks project delivering food assistance via biometric identity.'),
+E(102,'4A','ID4Africa','dp','ID4Africa (Dr. Joseph J. Atick) — annual African digital identity forum. Father of commercial facial recognition. Now champions biometric inclusion across Africa.'),
+E(103,'NC','NANDA','ai','NANDA (MIT, Prof. Raskar) — five pillars: agent discovery, identity, communication, split-learning privacy, governance. The DPI–AI interface architecture of the future.'),
+];
+
+const act=[
+E(104,'eI','eIDAS 2','lg','eIDAS 2.0 (EU) — 27-member-state digital identity wallet mandate. Largest cross-border digital identity framework. Sets global interoperability standard beyond Europe.'),
+E(105,'PS','PSD3','lg','PSD3 (EU) — revised Payment Services Directive. Strong Customer Authentication requirements driving biometric payment adoption across European financial institutions.'),
+E(106,'GD','GDPR','lg','GDPR — global data governance reference. Right to explanation, data minimisation, consent, purpose limitation — all directly applicable to every DPI system design decision.'),
+E(107,'AI','EU AI Act','lg','EU AI Act — binding AI regulation. High-risk classification for government identity and benefits systems. Mandatory conformity assessments, bias testing, human oversight.'),
+E(108,'IC','ICAO','lg','ICAO DTC standards — Doc 9303 and Digital Travel Credential Technical Report. Foundation for mobile digital passports at international borders.'),
+E(109,'UG','UN DPI','lg','UN Secretary-General\'s Universal DPI Safeguards (2024) — multilateral framework defining minimum standards for DPI systems. Human rights baseline for inclusive digital government.'),
+E(110,'NP','NIST PQC','lg','NIST FIPS 203 and FIPS 204 (2024) — the global post-quantum cryptography mandate. Every government DPI system needs a documented migration roadmap to these standards now.'),
+E(111,'30','ISO 30107','lg','ISO/IEC 30107 PAD — Presentation Attack Detection for biometrics. Part 3 defines deepfake and synthetic face testing methodology. Require in all biometric procurement contracts.'),
+E(112,'18','ISO 18013','lg','ISO 18013-5 — mDL and digital travel credential standard. Widely adopted in ICAO DTC framework. Technical bridge from physical to digital passport.'),
+E(113,'VC','W3C VC','lg','W3C Verifiable Credentials 1.1 — open standard for cryptographically verifiable digital credentials. Foundation of SSI and cross-border credential recognition globally.'),
+E(114,'DD','W3C DID','lg','W3C DID Core 1.0 — Decentralised Identifiers. Globally unique, cryptographically verifiable, holder-controlled. The identity layer of Self-Sovereign Identity systems.'),
+E(115,'FD','FIDO2','lg','FIDO2 / OpenID Connect — passwordless authentication standards. FIDO2 is the DPI authentication standard for mobile-first government services. Eliminates password-based attacks entirely.'),
+E(116,'HL','HL7 FHIR','lg','HL7 FHIR R4 — global health data exchange standard. Longitudinal records, AI diagnostics, cross-border portability. Foundation of every health DPI interoperability framework.'),
+];
+
+const tmap={};
+table.forEach(([k,v])=>{tmap[k]=v;});
+
+function mkEl(el){
+  const d=document.createElement('div');
+  d.className='el '+el.c;
+  d.innerHTML='<span class="n">'+el.n+'</span><span class="s">'+el.s+'</span><span class="nm">'+el.nm+'</span>';
+  d.onclick=()=>{
+    document.getElementById('det').innerHTML='<div class="dtitle">'+el.s+' — '+el.nm+'</div><div class="dcat">'+cats[el.c]+' &nbsp;·&nbsp; Element #'+el.n+'</div><div>'+el.d+'</div>';
+  };
+  return d;
+}
+function blk(span){
+  const d=document.createElement('div');
+  d.className='blank';
+  if(span>1)d.style.gridColumn='span '+span;
+  d.style.aspectRatio='1/1.15';
+  return d;
+}
+function mrkr(txt){
+  const d=document.createElement('div');
+  d.className='marker';
+  d.textContent=txt;
+  return d;
+}
+
+const g=document.getElementById('g');
+for(let p=1;p<=7;p++){
+  for(let c=1;c<=18;c++){
+    const key=p+'-'+c;
+    const el=tmap[key];
+    if(p===1&&c===2){g.appendChild(blk(16));continue;}
+    if(p===1&&c>=2&&c<=17)continue;
+    if((p===2||p===3)&&c===3){g.appendChild(blk(10));continue;}
+    if((p===2||p===3)&&c>=3&&c<=12)continue;
+    if((p===6||p===7)&&c===3){g.appendChild(mrkr(p===6?'91–103':'104–116'));continue;}
+    if(el){g.appendChild(mkEl(el));}
+    else{g.appendChild(blk());}
+  }
+}
+
+const gr=document.createElement('div');gr.className='gap';g.appendChild(gr);
+const ll=document.createElement('div');ll.className='row-lbl';
+ll.textContent='▸  DPG & Open-Source Series — elements 91–103  (DPI Lanthanides)';g.appendChild(ll);
+g.appendChild(blk());g.appendChild(blk());
+lant.forEach(e=>g.appendChild(mkEl(e)));
+g.appendChild(blk());g.appendChild(blk());g.appendChild(blk());
+
+const al=document.createElement('div');al.className='row-lbl';
+al.textContent='▸  Legal & Standards Series — elements 104–116  (DPI Actinides)';g.appendChild(al);
+g.appendChild(blk());g.appendChild(blk());
+act.forEach(e=>g.appendChild(mkEl(e)));
+g.appendChild(blk());g.appendChild(blk());g.appendChild(blk());
+</script>
+</body>
+</html>
